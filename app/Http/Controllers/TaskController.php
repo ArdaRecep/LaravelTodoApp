@@ -32,7 +32,7 @@ class TaskController extends Controller
 
         $todo = Todo::create($request->validated());
 
-        return redirect()->route("todo.edit", ['id' => $todo->id])->with("success", "Görev Başarıyla Kaydedildi");
+        return redirect()->route("task.list")->with("success", "Görev Başarıyla Kaydedildi");
     }
 
     /**
@@ -55,9 +55,11 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(TaskRequest $request, string $id)
     {
-        //
+        $todo = Todo::findOrFail($id);
+        $todo->update($request->validated());
+        return redirect()->route("task.list")->with("success","Görev Başarıyla Güncellendi");
     }
 
     /**
@@ -65,6 +67,8 @@ class TaskController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $todo = Todo::findOrFail($id);
+        $todo->delete();
+        return redirect()->route("task.list")->with("delete","Görev Başarıyla Silindi");
     }
 }

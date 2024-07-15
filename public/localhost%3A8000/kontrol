@@ -1,0 +1,119 @@
+<!-- resources/views/todo/list.blade.php -->
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Görevler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .containera2 
+            /* max-width: 800px; */
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 800px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .z{
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Todo Listesi</h2>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item z"><a href="http://localhost:8000/create">Kayıt</a></li>
+              <li class="breadcrumb-item active z" aria-current="page">Görevlerim</li>
+            </ol>
+          </nav>
+        <ul>
+                        <li>
+                <b>Görev Adı: deneme</b>
+                <br/>
+                <b>Görev Açıklaması: asasas</b>
+                <br/>
+                <div style="margin-top: 10px" class="d-flex justify-content-start">
+                    <a href="" class="btn btn-outline-danger">Sil&nbsp;&nbsp;<i class="fa fa-trash"></i></a>
+                    <a href="http://localhost:8000/edit/1" style="margin-left: 10px" class="btn btn-outline-primary">Düzenle&nbsp;&nbsp;<i class="fa fa-edit"></i></a>
+                </div>
+            </li>
+                        <li>
+                <b>Görev Adı: ses 123</b>
+                <br/>
+                <b>Görev Açıklaması: ses 321</b>
+                <br/>
+                <div style="margin-top: 10px" class="d-flex justify-content-start">
+                    <a href="" class="btn btn-outline-danger">Sil&nbsp;&nbsp;<i class="fa fa-trash"></i></a>
+                    <a href="http://localhost:8000/edit/2" style="margin-left: 10px" class="btn btn-outline-primary">Düzenle&nbsp;&nbsp;<i class="fa fa-edit"></i></a>
+                </div>
+            </li>
+                        <li>
+                <b>Görev Adı: 7</b>
+                <br/>
+                <b>Görev Açıklaması: tttt</b>
+                <br/>
+                <div style="margin-top: 10px" class="d-flex justify-content-start">
+                    <a href="" class="btn btn-outline-danger">Sil&nbsp;&nbsp;<i class="fa fa-trash"></i></a>
+                    <a href="http://localhost:8000/edit/3" style="margin-left: 10px" class="btn btn-outline-primary">Düzenle&nbsp;&nbsp;<i class="fa fa-edit"></i></a>
+                </div>
+            </li>
+                        <li>
+                <b>Görev Adı: görev ad 1</b>
+                <br/>
+                <b>Görev Açıklaması: görev ad açıklama 1</b>
+                <br/>
+                <div style="margin-top: 10px" class="d-flex justify-content-start">
+                    <a href="" class="btn btn-outline-danger">Sil&nbsp;&nbsp;<i class="fa fa-trash"></i></a>
+                    <a href="http://localhost:8000/edit/4" style="margin-left: 10px" class="btn btn-outline-primary">Düzenle&nbsp;&nbsp;<i class="fa fa-edit"></i></a>
+                </div>
+            </li>
+                        <li>
+                <b>Görev Adı: görev ad 2</b>
+                <br/>
+                <b>Görev Açıklaması: görev ad açıklama 2</b>
+                <br/>
+                <div style="margin-top: 10px" class="d-flex justify-content-start">
+                    <a href="" class="btn btn-outline-danger">Sil&nbsp;&nbsp;<i class="fa fa-trash"></i></a>
+                    <a href="http://localhost:8000/edit/5" style="margin-left: 10px" class="btn btn-outline-primary">Düzenle&nbsp;&nbsp;<i class="fa fa-edit"></i></a>
+                </div>
+            </li>
+                        <li>
+                <b>Görev Adı: görev ad 3</b>
+                <br/>
+                <b>Görev Açıklaması: görev ad 3 açıklama</b>
+                <br/>
+                <div style="margin-top: 10px" class="d-flex justify-content-start">
+                    <a href="" class="btn btn-outline-danger">Sil&nbsp;&nbsp;<i class="fa fa-trash"></i></a>
+                    <a href="http://localhost:8000/edit/6" style="margin-left: 10px" class="btn btn-outline-primary">Düzenle&nbsp;&nbsp;<i class="fa fa-edit"></i></a>
+                </div>
+            </li>
+                    </ul>
+    </div>
+</body>
+</html>
