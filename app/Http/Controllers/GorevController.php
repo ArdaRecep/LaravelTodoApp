@@ -18,10 +18,10 @@ class GorevController extends Controller
         $todo->gorevaciklama = $request->gorevaciklama;
         $todo->save();
     }
-    function kontrol()
+    function list()
     {
         $todos = Todo::all();
-        return view('kontroll', compact('todos'));
+        return view('list', compact('todos'));
     }
     function duzenle($id)
     {

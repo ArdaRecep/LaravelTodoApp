@@ -21,7 +21,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="http://localhost:8000/create"><em><u>Kayıt</u></em></a></li>
-                <li class="breadcrumb-item"><a href="http://localhost:8000/kontrol"><em><u>Görevlerim</u></em></a></li>
+                <li class="breadcrumb-item"><a href="http://localhost:8000/list"><em><u>Görevlerim</u></em></a></li>
                 <li class="breadcrumb-item active" aria-current="page"><em><u>Düzenle</u></em></li>
             </ol>
         </nav>

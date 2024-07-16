@@ -45,7 +45,7 @@
             margin-bottom: 5px;
         }
 
-        .b {
+        body {
             height: auto !important;
             margin-top: 50px !important;
             margin-bottom: 50px !important;
@@ -55,20 +55,14 @@
             0% {
                 opacity: 1;
             }
-
-            50% {
-                opacity: 0.8;
+            45%{
+                opacity: 1;
             }
 
-            60% {
-                opacity: 0.6;
-            }
-
-            80% {
+            90% {
                 opacity: 0;
                 display: none;
             }
-
             100% {
                 opacity: 0;
                 display: none;
@@ -79,10 +73,25 @@
         .alert {
             animation: hideAlert 3s forwards;
         }
+        .c{
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            width: auto;
+            max-width: 400px;
+            box-sizing: content-box;
+        }
+        .i{
+            padding-top: 15px;
+        }
+        li:hover .c{
+            display: block;
+        }
     </style>
 </head>
 
-<body class="b">
+<body>
     <div class="container">
         <h2>Görev Listesi</h2>
         <nav aria-label="breadcrumb">
@@ -104,17 +113,14 @@
         <ul>
             @foreach ($todos as $todo)
                 <li>
-                    <p class="d-flex justify-content-center"><b>Görev Adı:&nbsp;</b>{{ $todo->gorevad }}</p>
-                    <p class="d-flex justify-content-center"><b>Görev Açıklaması:&nbsp;</b>{{ $todo->gorevaciklama }}
+                    <div class="row justify-content-center">
+                    <p class="c"><b>Görev Adı:&nbsp;</b>{{ $todo->gorevad }}</p>
+                    </div>
+                    <div class="row justify-content-center">
+                    <p class="c i"><b>Görev Açıklaması:&nbsp;</b>{{ $todo->gorevaciklama }}
                     </p>
+                    </div>
                     <div class="d-flex justify-content-center mt-3">
-                        {{-- <form method="POST" action="{{ route('todo.delete', ['id' => $todo->id]) }}">
-                            @method("DELETE")
-                            @csrf
-                            <button type="submit" class="btn btn-outline-danger">Sil&nbsp;&nbsp;<i
-                                    class="fa fa-trash"></i></button>
-                        </form> --}}
-                        <!-- Button trigger modal -->
                         <button type="button" class="btn  btn-outline-danger" data-bs-toggle="modal"
                             data-bs-target="#exampleModal{{ $todo->id }}">Sil&nbsp;&nbsp;<i class="fa fa-trash"></i>
                         </button>

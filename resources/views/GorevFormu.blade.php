@@ -37,13 +37,13 @@
                     <textarea class="form-control a @error("gorevaciklama") is-invalid border border-danger @enderror" required="" id="gorevaciklama" name="gorevaciklama" rows="3" placeholder="Görev açıklaması giriniz" style="height: 110px;"></textarea>
                     @error("gorevaciklama")
                     <div class="d-block invalid-feedback">
-                        Görev açıklama boş olamaz!
+                        Görev açıklama boş  olamaz!
                       </div>
                       @enderror
                 </div>
                 <div class="d-flex justify-content-between mt-4">
                     <button type="submit"  class="btn btn-outline-success">Görevi Kaydet&nbsp;&nbsp;<i class="fa fa-save"></i></button>
-                    <a href="http://localhost:8000/kontrol" class="btn btn-outline-primary" style="margin-right: 5px;">Görevleri Listele&nbsp;&nbsp;<i class="fa fa-list"></i></a>
+                    <a href="http://localhost:8000/list" class="btn btn-outline-primary" style="margin-right: 5px;">Görevleri Listele&nbsp;&nbsp;<i class="fa fa-list"></i></a>
                 </div>
             </form>
         </div>

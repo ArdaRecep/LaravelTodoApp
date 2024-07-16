@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 Route::get("/create",[GorevController::class,'olustur'])->name("task.create");
 Route::post('/create',[TaskController::class,"store"] )->name("task.store");
-Route::get('/kontrol',[GorevController::class,"kontrol"])->name("task.list");
+Route::get('/list',[GorevController::class,"list"])->name("task.list");
 
 Route::get('/edit/{id}',[TaskController::class,"edit"])->name("todo.edit");
 Route::put('/update/{id}',[TaskController::class,"update"])->name("todo.update");
